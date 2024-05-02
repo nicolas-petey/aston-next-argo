@@ -25,11 +25,11 @@ jobs:
         with:
           ref: main
 
-      - name: Update Deployment Image Tag
-        run: |
-          sed -i "s|${{ secrets.DOCKER_USERNAME }}/projet-argo:.*|${{ secrets.DOCKER_USERNAME }}/projet-argo:${{ github.sha }}|g" ./cicd/deployment/deployment.yaml
-          git config --global user.email "ynixos@outlook.fr"
-          git config --global user.name "nicolas-petey"
-          git add .
-          git commit -am "Update image tag to ${{ github.sha }}" || echo "No changes to commit"
-          git push origin mainname: Docker Image CI
+      # - name: Update Deployment Image Tag
+      #   run: |
+      #     sed -i "s|${{ secrets.DOCKER_USERNAME }}/projet-argo:.*|${{ secrets.DOCKER_USERNAME }}/projet-argo:${{ github.sha }}|g" ./cicd/deployment/deployment.yaml
+      #     git config --global user.email "ynixos@outlook.fr"
+      #     git config --global user.name "nicolas-petey"
+      #     git add .
+      #     git commit -am "Update image tag to ${{ github.sha }}" || echo "No changes to commit"
+      #     git push origin mainname: Docker Image CI
