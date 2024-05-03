@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: projet-argo-container
-          image: ynixos/projet-argo:2821dd56e26d2ee58fffbad0620c3f69fac51dfc
+          image: ynixos/projet-argo:eb85290cfba59162ee0fcdf7faee0bbf68fd8e54
           ports:
             - containerPort: 3000
